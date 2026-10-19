@@ -23,6 +23,7 @@ class Compiler
 };
 
         std::vector <Token> tokens;
+        std::vector <Token> Keywords;
         std::string compiler_Error;
 
     public:
