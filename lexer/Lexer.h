@@ -20,11 +20,11 @@ class Compiler
 
         SEMICOLON,
         EQUALS,
-}
+};
 
         std::vector <Token> tokens;
         std::string compiler_Error;
 
     public:
         void Lexer(std::string input);
-}
+};
