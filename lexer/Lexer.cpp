@@ -5,18 +5,22 @@
 #include<string>
 
 void Compiler::Lexer(std::string input) {
-  for(auto& i : input) {
-    if(i == ' ') {
-      i++
+  std::string currentWord;
+  for(int ai = 0; ai < input.size(); ++ai) {
+    if(isalpha(currentWord)) {
+      ++ai;
+      currentWord+=input[ai];
     }
-    if(isalpha(i) {
-      if(i == "fn" || i == "var" || i == "auto" || i == "int" || i == "float" || i == "bool" || i == "char" || i == "void" || i == "string" || i == "if" || i == "else" || i == "for" || i == "while" || i == "switch" || i == "case" || i == "break" || i == "continue" || i == "const" || i == "global" || i == "static" || i == "import") {
+    if(isalpha(currentWord)) {
+      if(currentWord == "fn" || currentWord == "var" || currentWord == "auto" || currentWord == "int" || currentWord == "float" || currentWord == "bool" || currentWord == "char" || currentWord == "void" || currentWord == "string" || currentWord == "if" || currentWord == "else" || currentWord == "for" || currentWord == "while" || currentWord == "switch" || currentWord == "case" || currentWord == "break" || currentWord == "continue" || currentWord == "const" || currentWord == "global" || currentWord == "static" || currentWord == "import") {
         tokens.push_back(Compiler { Token::KEYWORDS } );
-        i++
+        ++ai;
+        currentWord+=input[ai];
       }
-      if(i != Compiler { Token::KEYWORDS }) {
+      if(currentWord != Compiler { Token::KEYWORDS }) {
         tokens.push_back( Compiler { Token::IDENTIFIER }
-        i++
+        ++ai;
+        currentWord+=input[ai];
       }
 
     }
