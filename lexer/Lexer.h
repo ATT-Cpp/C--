@@ -6,7 +6,7 @@
 class Compiler
 {
     private: 
-        enum Token
+        enum Token  
 {
         
         IDENTIFIER, //variable names
@@ -26,4 +26,5 @@ class Compiler
         std::string compiler_Error;
 
     public:
-        void Lexer(std::string input)
+        void Lexer(std::string input);
+}
